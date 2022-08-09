@@ -3,6 +3,8 @@ import './App.css';
 import Header from './Components/Header';
 import Content from './Components/Content';
 import Total from './Components/Total';
+import Part from './Components/Part';
+
 
 const App = () => {
   const course = 'Half Stack application development'
@@ -17,7 +19,7 @@ const App = () => {
   return (
     <div>
       <Header course={course} />
-      <Content parts={[part1,part2,part3]} exercises={[exercises1,exercises2,exercises3]} />
+      <Content part={[part1, part2, part3]}    exercises={[exercises1, exercises2, exercises3]} />
       <Total sum={exercises1 + exercises2 + exercises3} />
     </div>
   )
@@ -26,3 +28,4 @@ const App = () => {
 
 
 export default App;
+
