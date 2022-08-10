@@ -8,24 +8,29 @@ import Part from './Components/Part';
 
 const App = () => {
   const course = 'Half Stack application development'
-  const part1 = {
+  const parts = [
+    {
     name: 'Fundamentals of React',
     exercises: 10
-  }
-  const part2 = {
+  },
+  {
     name: 'Using props to pass data',
     exercises: 7
-  }
-  const part3 = {
+  },
+  {
     name: 'State of component',
     exercises: 14
   }
+]
+  
   return (
     <div>
       <Header course={course} />
-      {part1.name} {part1.exercises} <br/>
-      {part2.name} {part2.exercises} <br/>
-      {part3.name} {part3.exercises}
+      {parts[0].name} {parts[0].exercises} <br/>
+      {parts[1].name} {parts[1].exercises} <br/>
+      {parts[2].name} {parts[2].exercises} <br/>
+      <p>Number of exercises {parts[0].exercises + parts[1].exercises + parts[2].exercises}
+      </p>
     </div>
   )
 }
