@@ -1,9 +1,9 @@
-import React, { Components } from 'react';
+import React from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Content from './Components/Content';
 import Total from './Components/Total';
-import Part from './Components/Part';
+
 
 
 const App=()=>{

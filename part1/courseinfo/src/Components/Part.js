@@ -5,7 +5,7 @@ const Part=(props)=>{
     return (
         <div> 
             <p>
-             {props.parts}  : 
+             {props.parts} : 
              {props.exercises}
             </p>
             

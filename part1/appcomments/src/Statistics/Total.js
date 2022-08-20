@@ -1,17 +1,15 @@
 import React from "react";
 
 
-const Total=(props)=>{
+const Total=(props)=> {
     console.log(props)
-        return (
+    return(
         <div>
             <p>
-                Number of exercises :  
-                {props.sum}
+               Total: {props.sum}
             </p>
         </div>
     )
 }
-
 
 export default Total;
