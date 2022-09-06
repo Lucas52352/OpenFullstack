@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react'
+import axios from 'axios'
 import Submit from './Components/Submit'
 import Search from './Components/Search'
 import SearchList from './Components/Searchlist'
@@ -7,22 +9,28 @@ import Input from './Components/Input'
 
 
 const App = () => {
-  const [ persons, setPersons ] = useState([
-    { name: 'Arto Hellas', id: 0, number: "040-123456"},
-    { name: 'Ada Lovelace',id: 1, number: '39-44-5323523' },
-    { name: 'Dan Abramov',id: 2, number: '12-43-234345' },
-    { name: 'Mary Poppendieck',id: 3, number: '39-23-6423122' }
-  ]) 
-
+  const [ persons, setPersons ] = useState([]) 
   const [ searchField, setSearchField] = useState('')
   const [ newName, setNewName ] = useState('')
   const [ newNumber, setNewNumber] = useState('')
+
+  useEffect(() => {
+    console.log('efect')
+    axios
+      .get('http://localhost:3001/persons')
+      .then(response => {
+        console.log('promise fulfilled')
+        setPersons(response.data)
+      }) 
+  }, [])
+   console.log('render', persons.length, 'persons')
+  
   
   const addPerson = (event) => {
     event.preventDefault()
     const nameObject = {
       name: newName,
-      id: persons.length,
+      id: persons.length + 1,
       number: newNumber
       
     }
