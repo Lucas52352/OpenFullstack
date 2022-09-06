@@ -3,15 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^0.27.2",
+=======
+>>>>>>> 215e4f28f7ce55249c53700abbd4fdd8165b6aea
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "0.9.5"
   },
+<<<<<<< HEAD
+=======
+  "devDependencies": {},
+>>>>>>> 215e4f28f7ce55249c53700abbd4fdd8165b6aea
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+<<<<<<< HEAD
     "eject": "react-scripts eject",
     "server": "json-server -p3001 --watch db.json"
   },
@@ -19,3 +27,8 @@
     "json-server": "^0.17.0"
   }
 }
+=======
+    "eject": "react-scripts eject"
+  }
+}
+>>>>>>> 215e4f28f7ce55249c53700abbd4fdd8165b6aea
