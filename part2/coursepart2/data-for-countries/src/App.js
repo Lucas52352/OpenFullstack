@@ -2,21 +2,20 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 import Country from "./Components/country";
+import CountryList from './Components/countryList';
 
 const App = () => {
  
   return(
-      <Router>
-        <div className="Data">
-          <Link to="/hola"></Link>
+      <Router> 
           <Routes>
-          <Route exact path='/hola' element={< Country />}></Route>
+          <Route exact path='/country/:name' element={< Country />}></Route>
+          <Route exact path='/' element={ <CountryList/> }></Route>
           </Routes>
-        </div>
+
       </Router>
   )
 
